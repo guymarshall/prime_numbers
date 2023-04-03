@@ -4,7 +4,18 @@ mod user_input;
 fn main() {
     let user_input: u128 = user_input::get_user_input("Enter a positive integer: ");
 
-    let is_prime: bool = math::is_prime_number(user_input);
-    
-    println!("{} is prime: {}", user_input, is_prime);
+    let mut counter: u128 = 0;
+    let mut prime_counter: u128 = 0;
+    let mut primes: Vec<u128> = vec![];
+
+    while prime_counter <= user_input {
+        let is_prime: bool = math::is_prime_number(counter);
+
+        if is_prime {
+            prime_counter += 1;
+            primes.push(counter);
+        }
+
+        counter += 1;
+    }
 }
