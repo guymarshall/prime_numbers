@@ -20,4 +20,6 @@ fn main() {
 
         counter += 1;
     }
+
+    primes.into_iter().for_each(|prime| println!("counter: {}", prime));
 }
