@@ -1,3 +1,5 @@
+#![forbid(unsafe_code)]
+
 pub fn is_prime_number(number: u128) -> bool {
     if number % 2 == 0 {
         return false;
