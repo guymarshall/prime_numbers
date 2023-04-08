@@ -21,5 +21,7 @@ fn main() {
         counter += 1;
     }
 
-    primes.into_iter().for_each(|prime| println!("counter: {}", prime));
+    primes.iter().enumerate().for_each(|(index, prime)| {
+        println!("{}: {}", index, prime);
+    });
 }
