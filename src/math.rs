@@ -17,5 +17,5 @@ pub fn is_prime_number(number: i32) -> bool {
         counter += increment;
     }
 
-    return number > 1 && is_prime && !is_not_prime;
+    number > 1 && is_prime && !is_not_prime
 }
