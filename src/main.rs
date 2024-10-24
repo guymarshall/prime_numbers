@@ -1,10 +1,11 @@
 #![forbid(unsafe_code)]
 
 mod math;
-mod user_input;
+
+use promptput::input;
 
 fn main() {
-    let user_input: i32 = user_input::input("Enter a positive integer: ");
+    let user_input: i32 = input("Enter a positive integer: ");
 
     let mut counter: i32 = 0;
     let mut prime_counter: i32 = 0;

@@ -19,3 +19,20 @@ pub fn is_prime_number(number: i32) -> bool {
 
     number > 1 && is_prime && !is_not_prime
 }
+
+/*
+AKS Test
+
+(x - 1)^p - (x^p - 1)
+
+If all coefficients are divisible by p then p is prime
+*/
+
+/*
+Fermat's Little Theorem
+
+a^p - a     ---->   is divisible by p
+p is prime      1 <= a <= p
+
+Check this for many values for a from 1 to p. The success rate for this test is over 99.999%.
+*/
