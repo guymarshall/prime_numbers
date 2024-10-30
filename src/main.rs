@@ -12,6 +12,8 @@ fn main() {
     let mut primes: Vec<i32> = vec![];
 
     while prime_counter <= user_input {
+        print!("\r{}", prime_counter);
+
         let is_prime: bool = math::is_prime_number(counter);
 
         if is_prime {
