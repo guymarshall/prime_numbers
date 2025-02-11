@@ -7,24 +7,22 @@ use promptput::input;
 fn main() {
     let user_input: i32 = input("Enter a positive integer: ");
 
-    let mut counter: i32 = 0;
-    let mut prime_counter: i32 = 0;
+    let mut number: i32 = 2;
+    let mut prime_count: i32 = 0;
     let mut primes: Vec<i32> = vec![];
 
-    while prime_counter <= user_input {
-        print!("\r{}", prime_counter);
-
-        let is_prime: bool = math::is_prime_number(counter);
+    while prime_count < user_input {
+        let is_prime: bool = math::is_prime_number(number);
 
         if is_prime {
-            prime_counter += 1;
-            primes.push(counter);
+            prime_count += 1;
+            primes.push(number);
         }
 
-        counter += 1;
+        number += 1;
     }
 
     primes.iter().enumerate().for_each(|(index, prime)| {
-        println!("{}: {}", index, prime);
+        println!("{}: {}", index + 1, prime);
     });
 }
