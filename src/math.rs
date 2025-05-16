@@ -1,5 +1,3 @@
-#![forbid(unsafe_code)]
-
 pub fn is_prime_number(number: i32) -> bool {
     let mut counter: i32 = 2;
 
